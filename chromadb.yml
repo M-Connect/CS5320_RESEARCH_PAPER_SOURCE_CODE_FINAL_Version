@@ -1,0 +1,6 @@
+server:
+  port: 8000
+collections:
+  example_collection:
+    embedding_dim: 128
+    index_type: "hnsw"
