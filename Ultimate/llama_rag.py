@@ -58,6 +58,10 @@ qa_prompt_tmpl_str = (
 qa_prompt_tmpl = PromptTemplate(qa_prompt_tmpl_str)
 query_engine.update_prompts({"response_synthesizer:text_qa_template": qa_prompt_tmpl})
 
+def format_json_string(json_str):
+    """Convert single quotes to double quotes for valid JSON"""
+    return json_str.replace("'", '"')
+
 # Get response and format as table
 response = query_engine.query('Create a Table of what needs to be fixed in the Home to improve the property value. Include estimated price ranges.')
 try:
@@ -65,6 +69,7 @@ try:
     json_match = re.search(r'({[\s\S]*})', str(response))
     if json_match:
         json_str = json_match.group(1)
+        json_str = format_json_string(json_str)
         data = json.loads(json_str)
         
         # Sort by priority
