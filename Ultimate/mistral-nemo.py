@@ -32,7 +32,7 @@ index = VectorStoreIndex.from_documents(docs)
 
 #Query Engine
 # setting up the llm
-llm = Ollama(model="llama3.2", request_timeout=120.0) 
+llm = Ollama(model="mistral-nemo", request_timeout=120.0,) 
 
 # ====== Setup a query engine on the index previously created ======
 Settings.llm = llm # specifying the llm to be used
