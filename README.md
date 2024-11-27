@@ -12,7 +12,7 @@ To get started with the project, follow the instructions below:
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/CS5320_Research_Paper_Source_Code_v3.git
+    git clone https://github.com/M-Connect/CS5320_RESEARCH_PAPER_SOURCE_CODE_FINAL_Version.git
     ```
 2. Navigate to the project directory:
     ```sh
