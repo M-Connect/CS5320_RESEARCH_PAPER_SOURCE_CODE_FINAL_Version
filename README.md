@@ -22,19 +22,13 @@ To get started with the project, follow the instructions below:
     ```sh
     pip install -r requirements.txt
     ```
+4. Install Ollama from [here](https://ollama.com/download).
+5. Run the following commands to set up the necessary language models:
+    ```sh
+    ollama run llama3.2
+    ollama run phi3
+    ollama run mistral-nemo
+    ollama run gemma
+    ```
 
-## Usage
-
-Provide a brief example of how to run your code or any important usage instructions.
-
-## Contributing
-
-If you would like to contribute to this project, please follow the guidelines in `CONTRIBUTING.md`.
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
-
-## Contact
-
-For any questions or inquiries, please contact [TBD]. 
+This will be the area where your LLM will run.
