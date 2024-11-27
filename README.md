@@ -25,6 +25,7 @@ To get started with the project, follow the instructions below:
 4. Install Ollama from [here](https://ollama.com/download).
 5. Run the following commands to set up the necessary language models:
     ```sh
+    ollama run llama3.2
     ollama run phi3
     ollama run mistral-nemo
     ollama run gemma
