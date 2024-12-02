@@ -97,6 +97,21 @@ try:
         print("================================")
         print(tabulate(table, headers=headers, tablefmt='grid'))
         
+        # Write the table to an output file
+        output_file = f"home_improvement_recommendations_{llm.model}.txt"
+        with open(output_file, 'w') as f:
+            f.write("Home Improvement Recommendations:\n")
+            f.write("================================\n")
+            f.write(tabulate(table, headers=headers, tablefmt='grid'))
+            f.write("\n")
+            
+            # Write notes if present
+            notes = str(response).split(json_str)[-1].strip()
+            if notes:
+                f.write("\nNotes:\n")
+                f.write("------\n")
+                f.write(notes)
+                
         # Extract and print notes if present
         notes = str(response).split(json_str)[-1].strip()
         if notes:
